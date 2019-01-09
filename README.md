@@ -22,7 +22,9 @@
 
 7. Start flow **SentimentFlow**	
 
-8. Get the centralized view of a user, purchase, and the sentiments for the users after purchase<br/>
+8. Start service **SentimentService**
+
+9. Get the centralized view of a user, purchase, and the sentiments for the users after purchase<br/>
     `cdap cli call service CustomerSentimentApp.SentimentService GET sentiment/Roshan`<br/>
     `cdap cli call service CustomerSentimentApp.SentimentService GET sentiment/Rajan`
 
