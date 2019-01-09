@@ -1,6 +1,6 @@
 # CustomerSentimentCDAP
 
-##Steps to run the system
+## Steps to run the system
 
 1. Build and Deploy the app in CDAP
 
