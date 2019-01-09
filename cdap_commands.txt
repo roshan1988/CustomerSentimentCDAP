@@ -1,0 +1,5 @@
+cdap cli call service CustomerSentimentApp.UserProfileService POST user body '{"id":"Roshan","firstName":"Roshan","lastName":"Alexander","facebookId":"roshan1988"}'
+
+cdap cli call service CustomerSentimentApp.UserProfileService GET user/Roshan
+
+cdap cli call service CustomerSentimentApp.SentimentService GET sentiment/Roshan
