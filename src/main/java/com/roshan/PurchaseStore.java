@@ -42,7 +42,7 @@ public class PurchaseStore extends AbstractFlowlet {
     public void process(Purchase purchase) {
         LOG.info("Purchase info: Customer {}, ProductId {}",
                 purchase.getCustomer(), purchase.getProduct());
-        store.write(Bytes.toBytes(UUID.randomUUID()), purchase);
+        store.write(Bytes.toBytes(purchase.getCustomer()), purchase);
     }
 
     @Override

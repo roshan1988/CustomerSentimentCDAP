@@ -48,6 +48,9 @@ public final class SentimentServiceHandler extends AbstractHttpServiceHandler {
     @UseDataSet("userProfiles")
     private KeyValueTable userProfiles;
 
+    @UseDataSet("purchases")
+    private ObjectMappedTable<Purchase> purchasesStore;
+
     @Path(SENTIMENT_ENDPOINT + "/{id}")
     @GET
     public void getUserSentiment(HttpServiceRequest request, HttpServiceResponder responder, @PathParam("id") String id) {
@@ -71,7 +74,8 @@ public final class SentimentServiceHandler extends AbstractHttpServiceHandler {
                 sentiment = "VERY_HAPPY";
             }
         }
-        UserSentiment userSentiment = new UserSentiment(userProfile, facebookPost, null, sentiment);
+        Purchase purchase = purchasesStore.read(id);
+        UserSentiment userSentiment = new UserSentiment(userProfile, facebookPost, purchase, sentiment);
         responder.sendJson(userSentiment);
     }
 

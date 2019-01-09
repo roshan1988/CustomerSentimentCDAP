@@ -6,14 +6,14 @@ public final class UserSentiment {
 
     FacebookPost facebookPost;
 
-    Purchase[] purchases;
+    Purchase purchase;
 
     String sentiment;
 
-    public UserSentiment(UserProfile userProfile, FacebookPost facebookPost, Purchase[] purchases, String sentiment) {
+    public UserSentiment(UserProfile userProfile, FacebookPost facebookPost, Purchase purchase, String sentiment) {
         this.userProfile = userProfile;
         this.facebookPost = facebookPost;
-        this.purchases = purchases;
+        this.purchase = purchase;
         this.sentiment = sentiment;
     }
 
@@ -33,12 +33,12 @@ public final class UserSentiment {
         this.facebookPost = facebookPost;
     }
 
-    public Purchase[] getPurchases() {
-        return purchases;
+    public Purchase getPurchase() {
+        return purchase;
     }
 
-    public void setPurchases(Purchase[] purchases) {
-        this.purchases = purchases;
+    public void setPurchase(Purchase purchase) {
+        this.purchase = purchase;
     }
 
     public String getSentiment() {
