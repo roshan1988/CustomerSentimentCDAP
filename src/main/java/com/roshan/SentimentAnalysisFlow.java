@@ -30,5 +30,6 @@ public class SentimentAnalysisFlow extends AbstractFlow {
     addFlowlet("sentimentCollector", new SentimentStore());
     connectStream("facebookPostsStream", "postStreamReader");
     connect("postStreamReader", "sentimentCollector");
+    System.out.println("Sentiment Anlysis Flow Configure");
   }
 }
